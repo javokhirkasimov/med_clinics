@@ -8,5 +8,5 @@ class Clinic(models.Model):
     district = models.CharField(max_length=250, null=True)
     street = models.CharField(max_length=250, null=True)
     home_num = models.CharField(max_length=15, null=True)
-    open_time = models.TimeField(auto_now=False, auto_now_add=False)
-    close_time = models.TimeField(auto_now=False, auto_now_add=False)
+    open_time = models.TimeField()
+    close_time = models.TimeField()
