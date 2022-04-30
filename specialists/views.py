@@ -3,11 +3,11 @@ from .serializers import SpecialistSerializer
 from .models import Specialist
 
 
-class SpecialistListCreateView(generics.ListCreateAPIView):
+class SpecialistListView(generics.ListAPIView):
     serializer_class = SpecialistSerializer
     queryset = Specialist.objects.all()
 
 
-class SpecialistRUDView(generics.RetrieveUpdateDestroyAPIView):
+class SpecialistRetrieveView(generics.RetrieveAPIView):
     serializer_class = SpecialistSerializer
     queryset = Specialist.objects.all()

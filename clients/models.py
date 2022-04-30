@@ -7,3 +7,5 @@ class Client(models.Model):
     contact = models.CharField(max_length=15, null=True)
     address = models.CharField(max_length=350, null=True)
 
+    def __str__(self):
+        return self.full_name
