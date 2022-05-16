@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import AppointmentListCreateView
+from .views import AppointmentCreateView
 
 urlpatterns = [
-    path('', AppointmentListCreateView.as_view(), name='appointment-list'),
+    path('', AppointmentCreateView.as_view(), name='appointment-create'),
 ]

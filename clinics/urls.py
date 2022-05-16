@@ -1,5 +1,6 @@
-from django.urls import path, include
+from django.urls import path
+from .views import ClinicsListView
 
 urlpatterns = [
-    path('', None),
+    path('', ClinicsListView.as_view(), name='list-clinics'),
 ]

@@ -20,12 +20,3 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
-
-
-# class ClinicService(models.Model):
-#     specialist = models.ForeignKey(Specialist, on_delete=models.CASCADE)
-#     service = models.ForeignKey(Service, on_delete=models.CASCADE)
-#     clinic = models.ForeignKey(Clinic, on_delete=models.CASCADE)
-#
-#     def __str__(self):
-#         return self.service.title

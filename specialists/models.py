@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from clinics.models import Clinic
 
 
 class Education(models.Model):
@@ -23,6 +24,7 @@ class Specialist(models.Model):
         null=True
     )
     education = models.ManyToManyField(Education)
+    clinic = models.ForeignKey(Clinic, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.full_name

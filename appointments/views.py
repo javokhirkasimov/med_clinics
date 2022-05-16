@@ -3,6 +3,6 @@ from .serializers import AppointmentSerializer
 from .models import Appointment
 
 
-class AppointmentListCreateView(generics.ListCreateAPIView):
+class AppointmentCreateView(generics.CreateAPIView):
     serializer_class = AppointmentSerializer
     queryset = Appointment.objects.all()

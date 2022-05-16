@@ -35,7 +35,8 @@ class SpecialistSerializer(serializers.ModelSerializer):
             'skills',
             'education',
             'feedbacks',
-            'services'
+            'services',
+            'clinic'
         ]
 
     def get_feedbacks(self, obj):

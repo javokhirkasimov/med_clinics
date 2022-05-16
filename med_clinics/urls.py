@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from .yasg import urlpatterns as docs_url
 
 
 urlpatterns = [
@@ -25,4 +26,7 @@ urlpatterns = [
     path('services/', include('services.urls')),
     path('appointments/', include('appointments.urls')),
     path('feedbacks/', include('feedbacks.urls')),
+    path('clinics/', include('clinics.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += docs_url
