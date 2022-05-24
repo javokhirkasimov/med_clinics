@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
 from environs import Env
 
 env = Env()
@@ -30,10 +29,11 @@ CHAT_ID = env.str('CHAT_ID')
 SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG')
+print(env.bool('DEBUG'))
+ALLOWED_HOSTS = ["*"] if env.bool('DEBUG') else ["34.224.102.212"]
 
-ALLOWED_HOSTS = ["*"]
-
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
 
