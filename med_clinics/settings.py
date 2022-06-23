@@ -31,7 +31,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG')
 print(env.bool('DEBUG'))
-ALLOWED_HOSTS = ["*"] if env.bool('DEBUG') else ["18.206.211.243"]
+ALLOWED_HOSTS = ["*"] if env.bool('DEBUG') else ["medclinics.uz", "www.medclinics.uz","18.206.211.243"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
